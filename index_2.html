@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome!</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.11.3/dist/jquery.min.js"></script>
+                                    
+<link href="https://cdn.jsdelivr.net/npm/round-slider@1.3/dist/roundslider.min.css" rel="stylesheet" />
+                                    
+<script src="https://cdn.jsdelivr.net/npm/round-slider@1.3/dist/roundslider.min.js"></script>
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+.main{
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url('bg.png');
+  background-size: 100%, 100%;
+  background-attachment: fixed;
+}
+
+@keyframes emerge{
+  0%{
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.rs-border {
+    border: none;
+}
+.rs-control .rs-range-color {
+    background-color: #ee9d28;
+}
+.rs-control .rs-bg-color {
+    background-color: #f3ad65;
+}
+.rs-control .rs-handle {
+    background-color: #d58d25;
+}
+  .rslider {
+    font-family: Roboto;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 2%;
+  }
+  .one:after{
+    content: 'HTML';
+  }
+  .two:after{
+    content: 'CSS';
+  }
+  .three:after{
+    content: 'JavaScript';
+  }
+  .four:after{
+    content: 'Java';
+  }
+  .five:after{
+    content: 'MariaDB';
+  }
+  .six:after{
+    content: 'PHP';
+  }
+  .seven::after{
+    content: 'MySQL';
+  }
+.wrap h1{
+  padding: 5%;
+  animation: emerge ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+.card-wrap{
+  padding-top: 10%;
+  padding-left: 18%;
+}
+.card{
+  padding: 5px;
+}
+
+.card-two-wrap{
+  padding-left: 27%;
+}
+.card-three-wrap{
+  padding-left: 54%;
+}
+.card-one{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  background-color: #00B0FF;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+}
+.card-two{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  background-color: #00B0FF;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+}
+.card-three{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  background-color: #00B0FF;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+}
+
+
+.card-one.is-greater{
+  opacity: 1;
+
+}
+.card-two.is-greater{
+  opacity: 1;
+
+}
+.card-three.is-greater{
+  opacity: 1;
+
+}
+</style>
+</head>
+  
+<body>
+<div class="main">
+  <div class="wrap">
+    <h1>Select one of your strengths to get a recommended task!</h1>
+    <div id="slider1" class="rslider one"></div>
+    <div id="slider2" class="rslider two"></div>
+    <div id="slider3" class="rslider three"></div>
+    <div id="slider4" class="rslider four"></div>
+    <div id="slider5" class="rslider five"></div>
+    <div id="slider6" class="rslider six"></div>
+    <div id="slider7" class="rslider seven"></div>
+  </div>
+  <div class="card-wrap">
+    <div class="card-one-wrap">
+      <div class="card-one card"><h1>LibreHealth<br> EHR</h1><br>
+            <p>
+              EHR stands for Electronic Health Records and deals with database management.<br><br>It is for those who have a good skill in database and record systems.
+            </p></div>
+    </div>
+    <div class="card-two-wrap">
+      <div class="card-two card"><h1>LibreHealth Radiology</h1><br>
+            <p>
+              Radiology is a tool used by imaging professionals.<br><br>It is a modified version of LibreHealth Toolkit, and suitable for those who have creative skill to implement new components.
+            </p>
+</div>
+    </div>
+    <div class="card-three-wrap">
+      <div class="card-three card"><h1>LibreHealth Toolkit</h1><br>
+            <p>
+              It is the API which acts as the foundation for Radiology.<br><br>A person involoved with Radiology should have a strong understanding in generating APIs and should have a creative and forward thinking mind.
+            </p></div>
+    </div>
+  </div>
+  
+</div>
+
+  <script>
+    $(function(){
+      $("#slider1").roundSlider({
+          sliderType: "min-range",
+          radius: 50, 
+          value: 30, 
+          width: 10
+      });
+
+      $("#slider2").roundSlider({
+          sliderType: "min-range",
+          radius: 50,
+          value: 30,
+          width: 10
+      });
+      $("#slider3").roundSlider({
+          sliderType: "min-range",
+          radius: 50,
+          value: 30,
+          width: 10
+      });
+      $("#slider4").roundSlider({
+          sliderType: "min-range",
+          radius: 50, 
+          value: 30,
+          width: 10
+      });
+      $("#slider5").roundSlider({
+          sliderType: "min-range",
+          radius: 50, 
+          value: 30,
+          width: 10
+      });
+      $("#slider6").roundSlider({
+          sliderType: "min-range",
+          radius: 50, 
+          value: 30,
+          width: 10
+      });
+        $("#slider7").roundSlider({
+          sliderType: "min-range",
+          radius: 50, 
+          value: 30, 
+          width: 10
+      });  
+
+        $("#slider1").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-three, .card-two, .card-one').addClass('is-greater')
+              }else{
+                $('.card-one, .card-two, .card-three').removeClass('is-greater')
+              }
+          }
+      });
+      $("#slider2").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-three, .card-two, .card-one').addClass('is-greater')
+              }else{
+                $('.card-one, .card-two, .card-three').removeClass('is-greater')
+              }
+          }
+      });
+      $("#slider3").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-three, .card-two, .card-one').addClass('is-greater')
+              }else{
+                $('.card-one, .card-two, .card-three').removeClass('is-greater')
+              }
+          }
+      });
+      $("#slider4").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-three, .card-two').addClass('is-greater')
+              }else{
+                $('.card-two, .card-three').removeClass('is-greater')
+              }
+          }
+      });
+      $("#slider5").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-three, .card-one').addClass('is-greater')
+              }else{
+                $('.card-one, .card-three').removeClass('is-greater')
+              }
+          }
+      });
+    $("#slider6").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-one').addClass('is-greater')
+              }else{
+                $('.card-one').removeClass('is-greater')
+              }
+          }
+      });
+    $("#slider7").roundSlider({
+          change: function (e) {
+              if (e.value >= 50) {
+                $('.card-three, .card-two, .card-one').addClass('is-greater')
+              }else{
+                $('.card-one, .card-two, .card-three').removeClass('is-greater')
+              }
+          }
+      });
+
+      
+
+});
+
+</script>
+</body>
+</html>

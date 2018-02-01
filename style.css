@@ -1,0 +1,65 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Roboto;
+	text-align: center;
+	color: white;
+}
+.main{
+	height: 100%;
+	width: 100%;
+	background-color: #F44336;
+	position: absolute;
+}
+.main h1{
+		animation: emerge ease-in-out forwards 0.7s;
+
+	padding-top: 15%;
+}
+.main p{
+	animation-delay: 0.5s;
+	animation: emerge ease-in-out forwards 0.7s;
+	width: 20%;
+	margin-top: 3%;
+	padding-left: 40%;
+}
+@keyframes emerge{
+	0%{
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@keyframes reveal{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.button-main{
+	animation-delay: 1s;
+	animation: re ease-in-out forwards 0.7s;
+	padding: 10px;
+	transition: ease-in-out 0.2s;
+	display: inline;
+	border: 2px solid white;
+}
+.button-wrap{
+	padding-top: 5%;
+}
+.button-main:hover{
+	background-color: white;
+}
+.button-main:hover>a{
+	color: #212121;
+}
+a{
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+}
